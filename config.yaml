@@ -1,0 +1,15 @@
+site_name: "Ergo-Study Picks"
+site_tagline: "Small-room ergonomics that actually help."
+base_url: "http://localhost:8080"
+dry_run: true
+seed: 42
+model:
+  provider: "openai"
+  model_name: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 800
+theme:
+  brand_color: "#0f766e"
+  accent_color: "#f59e0b"
+  font_stack: "system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial"
+disclosure: "As an Amazon/Bol.com Associate I earn from qualifying purchases. No extra cost to you."

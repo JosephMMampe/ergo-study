@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ cfg.site_name }} — {{ cfg.site_tagline }}</title>
+  <link rel="stylesheet" href="{{ './style.css' if not slug else '../style.css' }}">
+  <meta name="description" content="{{ cfg.site_tagline }}">
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="{{ cfg.base_url }}">{{ cfg.site_name }}</a></h1>
+  <p class="tagline">{{ cfg.site_tagline }}</p>
+</header>
+<main>
+  {% block content %}{% endblock %}
+</main>
+<footer>
+  <p class="disclosure">Affiliate disclosure: {{ cfg.disclosure }}</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Latest Picks</h2>
+<ul class="grid">
+  {% for p in products %}
+    <li class="card">
+      <a class="tight" href="{{ './' ~ p.slug ~ '.html' }}">
+        <h3>{{ p.title }}</h3>
+      </a>
+      <p>Approx. €{{ '%.2f'|format(p.price_eur) }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

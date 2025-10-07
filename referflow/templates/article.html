@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="article">
+  <h2>{{ p.title }}</h2>
+  <p class="price">Approx. €{{ '%.2f'|format(p.price_eur) }}</p>
+
+  <p class="overview">{{ copy.overview }}</p>
+
+  <section>
+    <h3>Pros</h3>
+    <ul>
+      {% for pr in p.pros.split(";") %}
+      <li>{{ pr }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Cons</h3>
+    <ul>
+      {% for c in p.cons.split(";") %}
+      <li>{{ c }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h3>Specs</h3>
+    <p>{{ p.specs }}</p>
+  </section>
+
+  <p class="who">{{ copy.who }}</p>
+  <p class="verdict"><strong>{{ copy.verdict }}</strong></p>
+
+  <p class="cta">
+    <a class="btn" rel="sponsored nofollow" target="_blank" href="{{ p.affiliate_url }}">
+      Check price / availability
+    </a>
+  </p>
+
+  <p class="fineprint">Links may be affiliate; we may earn a small commission at no extra cost to you.</p>
+</article>
+{% endblock %}
