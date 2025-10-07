@@ -1,6 +1,6 @@
 site_name: "Ergo-Study Picks"
 site_tagline: "Small-room ergonomics that actually help."
-base_url: "http://localhost:8080"
+base_url: "https://josephmmampe.github.io/ergo-study"
 dry_run: true
 seed: 42
 model:
